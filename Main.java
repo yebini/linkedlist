@@ -4,8 +4,8 @@ public class Main{
 	public static void main(String[] args) {
 		LinkedList list = new LinkedList();
 		Scanner scan = new Scanner(System.in);
-//		Member member1 = new Member("¹Ú¿¹ºó", "010-2014-6463", "20181519", "¼ÒÇÁÆ®¿ş¾î°øÇĞ°ú");
-//		Member member2 = new Member("sfasa", "010-2014-6463", "sadfa", "¼ÒÇÁÆ®¿ş¾î°øÇĞ°ú");  
+//		Member member1 = new Member("ë°•ì˜ˆë¹ˆ", "010-0000-0000", "20181111", "ì†Œí”„íŠ¸ì›¨ì–´ê³µí•™ê³¼");
+//		Member member2 = new Member("sfasa", "010-0000-0000", "sadfa", "ì†Œí”„íŠ¸ì›¨ì–´ê³µí•™ê³¼");  
 //
 //		list.addFirst(member1);
 //		list.addFirst(member1);
@@ -20,17 +20,17 @@ public class Main{
 				int s1 = scan.nextInt();
 //			}
 //			catch(InputMismatchException ime) {
-//				System.out.println("ÁöÁ¤µÈ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À");
+//				System.out.println("ì§€ì •ëœ ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹­ì‹œì˜¤");
 //				int s1 = 0;
 //			}finally{
 				if (s1 == 1) {
-					System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+					System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 					String name = scan.next();
-					System.out.println("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+					System.out.println("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 					String phoneNum = scan.next();
-					System.out.println("ÇĞ¹øÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+					System.out.println("í•™ë²ˆì„ ì…ë ¥í•˜ì„¸ìš” : ");
 					String id = scan.next();
-					System.out.println("Àü°øÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+					System.out.println("ì „ê³µì„ ì…ë ¥í•˜ì„¸ìš” : ");
 					String major = scan.next();
 					Member member = new Member(name, phoneNum, id, major);
 						
@@ -40,15 +40,15 @@ public class Main{
 					if (s2 == 1) {
 						list.addFirst(member);
 					}else if (s2 == 2) {
-						System.out.println("»ğÀÔÇÒ ºÎºĞÀÇ ¾Õ ¿¬¶ôÃ³ÀÇ ÇĞ¹øÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+						System.out.println("ì‚½ì…í•  ë¶€ë¶„ì˜ ì• ì—°ë½ì²˜ì˜ í•™ë²ˆì„ ì…ë ¥í•˜ì„¸ìš”");
 						String inputId = scan.next();
 						list.addMid(inputId, member);
 					}else if (s2 == 3) {
 						list.addEnd(member);
-					}else {System.out.println("ÁöÁ¤µÈ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À");}
+					}else {System.out.println("ì§€ì •ëœ ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹­ì‹œì˜¤");}
 						
 				}else if (s1 == 2) {
-					System.out.println("»èÁ¦ÇÒ ¿¬¶ôÃ³ÀÇ ÇĞ¹øÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+					System.out.println("ì‚­ì œí•  ì—°ë½ì²˜ì˜ í•™ë²ˆì„ ì…ë ¥í•˜ì„¸ìš” : ");
 					String id = scan.next();
 						
 					if (list.getHead() == list.search(id)) {
@@ -59,14 +59,14 @@ public class Main{
 						list.removeMid(id);
 					}
 				}else if (s1 == 3) {
-					System.out.println("¼öÁ¤ÇÒ ¿¬¶ôÃ³ÀÇ ÇĞ¹øÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+					System.out.println("ìˆ˜ì •í•  ì—°ë½ì²˜ì˜ í•™ë²ˆì„ ì…ë ¥í•˜ì„¸ìš” : ");
 					String id = scan.next();
 					list.search(id);
-					System.out.println("¼öÁ¤ÇÒ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+					System.out.println("ìˆ˜ì •í•  ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 					String name = scan.next();
-					System.out.println("¼öÁ¤ÇÒ ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+					System.out.println("ìˆ˜ì •í•  ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 					String phoneNum = scan.next();
-					System.out.println("¼öÁ¤ÇÒ Àü°øÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+					System.out.println("ìˆ˜ì •í•  ì „ê³µì„ ì…ë ¥í•˜ì„¸ìš” : ");
 					String major = scan.next();
 					Member updateMember = new Member(name, phoneNum, id, major);
 					
@@ -75,32 +75,32 @@ public class Main{
 					list.printAll();
 				}else if (s1 == 5) {
 					break;
-				}else {System.out.println("ÁöÁ¤µÈ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À");}
+				}else {System.out.println("ì§€ì •ëœ ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹­ì‹œì˜¤");}
 
 			}catch(InputMismatchException ime) {
 				scan = new Scanner(System.in);
-				System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù");
+				System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤");
 			}
 		}
 	}
 	
 	public static void showPrint() {
 		System.out.println("=======================");
-		System.out.println("1.¿¬¶ôÃ³ µî·Ï");
-		System.out.println("2.¿¬¶ôÃ³ »èÁ¦");
-		System.out.println("3.¿¬¶ôÃ³ ¼öÁ¤");
-		System.out.println("4.¿¬¶ôÃ³ ¸ñ·Ï º¸±â");
-		System.out.println("5.ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("1.ì—°ë½ì²˜ ë“±ë¡");
+		System.out.println("2.ì—°ë½ì²˜ ì‚­ì œ");
+		System.out.println("3.ì—°ë½ì²˜ ìˆ˜ì •");
+		System.out.println("4.ì—°ë½ì²˜ ëª©ë¡ ë³´ê¸°");
+		System.out.println("5.í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 		System.out.println("=======================");
-		System.out.println("¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.println("ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 	}
 	public static void selectAdd() {
 		System.out.println("=======================");
-		System.out.println("1.ÀüÈ­¹øÈ£ºÎ °¡Àå ¾Õ¿¡ µî·Ï");
-		System.out.println("2.ÀüÈ­¹øÈ£ºÎ Áß°£¿¡ µî·Ï");
-		System.out.println("3.ÀüÈ­¹øÈ£ºÎ ¸Ç ³¡¿¡ µî·Ï");
+		System.out.println("1.ì „í™”ë²ˆí˜¸ë¶€ ê°€ì¥ ì•ì— ë“±ë¡");
+		System.out.println("2.ì „í™”ë²ˆí˜¸ë¶€ ì¤‘ê°„ì— ë“±ë¡");
+		System.out.println("3.ì „í™”ë²ˆí˜¸ë¶€ ë§¨ ëì— ë“±ë¡");
 		System.out.println("=======================");
-		System.out.println("¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.println("ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		
 	}
 	
